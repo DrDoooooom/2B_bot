@@ -26,7 +26,7 @@ client.on('message', message =>{
   const args = message.content.slice(prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  if (!client.commands.has(commandName)) return;
+  if (!client.commands.has(commandName,)) return;
 
   const command = client.commands.get(commandName)
 
@@ -36,3 +36,6 @@ client.on('message', message =>{
       console.error(error);
       message.reply('there was an error trying to execute that command!');
 }
+});
+// login to discord application
+client.login(token);
